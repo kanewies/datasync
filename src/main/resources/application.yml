@@ -1,40 +1,23 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: update
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
     open-in-view: true
     show-sql: true
     generate-ddl: true
-
-
+    database-platform: org.hibernate.dialect.MySQLDialect
   datasource: #database
     primary:  # 本地数据库
       name: WS #数据库名称，oracle必须使用大写
-      jdbc-url: jdbc:oracle:thin:@192.168.3.10:1521:orcl
-      username: ws
-      password: 123456
-      type: oracle #数据库类型，
-
-    #secondary:  # 源数据库
-    #  name: target #数据库名称，mysql使用小写
-    #  jdbc-url: jdbc:mysql://192.168.3.12:3306/target?useUnicode=true&amp;characterEncoding=UTF8
-    #  username: root
-    #  password: 123456
-    #  type: mysql #数据库类型
-
-      #primary:  # 本地数据库
-      #  name: target
-      #  jdbc-url: jdbc:mysql://192.168.3.12:3306/target?useUnicode=true&amp;characterEncoding=UTF8
-      #  username: root
-      #  password: 123456
-      #  type: mysql
-
+      jdbc-url: jdbc:mysql://39.106.183.62:3306/rrltest?useUnicode=true&amp;characterEncoding=UTF8
+      username: test
+      password: RRLtest@1012
+      type: mysql #数据库类型，
     secondary:  # 本地数据库
       name: WS
-      jdbc-url: jdbc:oracle:thin:@192.168.3.11:1521:orcl
-      username: ws
-      password: 123456
-      type: oracle
+      jdbc-url: jdbc:mysql://39.106.183.62:3306/rrltest?useUnicode=true&amp;characterEncoding=UTF8
+      username: test
+      password: RRLtest@1012
+      type: mysql
