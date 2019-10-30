@@ -11,13 +11,13 @@ spring:
   datasource: #database
     primary:  # 本地数据库
       name: WS #数据库名称，oracle必须使用大写
-      jdbc-url: jdbc:mysql://39.106.183.62:3306/rrltest?useUnicode=true&amp;characterEncoding=UTF8
+      jdbc-url: jdbc:mysql://39.106.183.62:3306/rrltest
       username: test
       password: RRLtest@1012
       type: mysql #数据库类型，
     secondary:  # 本地数据库
       name: WS
-      jdbc-url: jdbc:mysql://39.106.183.62:3306/rrltest?useUnicode=true&amp;characterEncoding=UTF8
+      jdbc-url: jdbc:mysql://39.106.183.62:3306/rrltest
       username: test
       password: RRLtest@1012
       type: mysql

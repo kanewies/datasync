@@ -5,25 +5,37 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.zsxx</groupId>
-    <artifactId>datasync</artifactId>
+    <groupId>org.skyline</groupId>
+    <artifactId>DataSync</artifactId>
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>datasync</name>
-    <description>Demo project for Spring Boot</description>
+    <name>DataSync</name>
+    <description>DataSync</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>repo2</id>
+            <url>http://repo2.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -33,12 +45,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>true</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-devtools</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--            <scope>true</scope>-->
+<!--        </dependency>-->
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -56,17 +68,17 @@
         <dependency>
             <groupId>com.ibeetl</groupId>
             <artifactId>beetl-framework-starter</artifactId>
-            <version>1.1.63.RELEASE</version>
+            <version>1.2.17.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
+            <version>5.2.0.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>2.1.4.RELEASE</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.2.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -81,33 +93,27 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>1.6.9</version>
+            <version>1.9.3</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.6.9</version>
+            <version>1.9.3</version>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.24</version>
+            <version>8.0.17</version>
         </dependency>
         <dependency>
             <groupId>net.sourceforge.jtds</groupId>
             <artifactId>jtds</artifactId>
             <version>1.3.1</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.oracle</groupId>-->
-<!--            <artifactId>ojdbc6</artifactId>-->
-<!--            <version>11.2.0.3</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.0.17</version>
+            <version>1.1.20</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -115,12 +121,7 @@
             <version>4.11</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.jolbox</groupId>
-            <artifactId>bonecp</artifactId>
-            <version>0.8.0.RELEASE</version>
-        </dependency>
-        <dependency>
+         <dependency>
             <groupId>com.jolbox</groupId>
             <artifactId>bonecp</artifactId>
             <version>0.8.0.RELEASE</version>
